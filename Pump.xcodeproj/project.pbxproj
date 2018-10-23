@@ -12,6 +12,11 @@
 		73921032217EDD3000DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921030217EDD3000DFC13C /* Main.storyboard */; };
 		73921034217EDD3100DFC13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73921033217EDD3100DFC13C /* Assets.xcassets */; };
 		73921037217EDD3100DFC13C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921035217EDD3100DFC13C /* LaunchScreen.storyboard */; };
+		73B31712217F2B5F00775CCA /* addCalorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31711217F2B5F00775CCA /* addCalorie.swift */; };
+		73B31714217F2C6100775CCA /* calorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31713217F2C6100775CCA /* calorie.swift */; };
+		73B31716217F2CDF00775CCA /* addSetMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31715217F2CDF00775CCA /* addSetMenu.swift */; };
+		73B31718217F2D1C00775CCA /* setMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31717217F2D1C00775CCA /* setMenu.swift */; };
+		73B3171A217F2D3B00775CCA /* more.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31719217F2D3B00775CCA /* more.swift */; };
 		FFFDBF5326FFFAD04114337D /* Pods_Pump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF1AA71D3D87ECE8AE8679D /* Pods_Pump.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +29,11 @@
 		73921033217EDD3100DFC13C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73921036217EDD3100DFC13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73921038217EDD3100DFC13C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B31711217F2B5F00775CCA /* addCalorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCalorie.swift; sourceTree = "<group>"; };
+		73B31713217F2C6100775CCA /* calorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorie.swift; sourceTree = "<group>"; };
+		73B31715217F2CDF00775CCA /* addSetMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSetMenu.swift; sourceTree = "<group>"; };
+		73B31717217F2D1C00775CCA /* setMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setMenu.swift; sourceTree = "<group>"; };
+		73B31719217F2D3B00775CCA /* more.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = more.swift; sourceTree = "<group>"; };
 		9DF1AA71D3D87ECE8AE8679D /* Pods_Pump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE87B4B6531B57E3CDDD66 /* Pods-Pump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.debug.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,7 +56,6 @@
 				AFDE87B4B6531B57E3CDDD66 /* Pods-Pump.debug.xcconfig */,
 				3F38E5AB64F7A1659A5D123C /* Pods-Pump.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,11 +91,32 @@
 				7392102C217EDD3000DFC13C /* AppDelegate.swift */,
 				7392102E217EDD3000DFC13C /* ViewController.swift */,
 				73921030217EDD3000DFC13C /* Main.storyboard */,
+				73B31719217F2D3B00775CCA /* more.swift */,
+				73B3171B217F2D5400775CCA /* setMenu */,
+				73B3171C217F2D7300775CCA /* calorie */,
 				73921033217EDD3100DFC13C /* Assets.xcassets */,
 				73921035217EDD3100DFC13C /* LaunchScreen.storyboard */,
 				73921038217EDD3100DFC13C /* Info.plist */,
 			);
 			path = Pump;
+			sourceTree = "<group>";
+		};
+		73B3171B217F2D5400775CCA /* setMenu */ = {
+			isa = PBXGroup;
+			children = (
+				73B31717217F2D1C00775CCA /* setMenu.swift */,
+				73B31715217F2CDF00775CCA /* addSetMenu.swift */,
+			);
+			path = setMenu;
+			sourceTree = "<group>";
+		};
+		73B3171C217F2D7300775CCA /* calorie */ = {
+			isa = PBXGroup;
+			children = (
+				73B31711217F2B5F00775CCA /* addCalorie.swift */,
+				73B31713217F2C6100775CCA /* calorie.swift */,
+			);
+			path = calorie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B3171A217F2D3B00775CCA /* more.swift in Sources */,
+				73B31712217F2B5F00775CCA /* addCalorie.swift in Sources */,
+				73B31716217F2CDF00775CCA /* addSetMenu.swift in Sources */,
 				7392102F217EDD3000DFC13C /* ViewController.swift in Sources */,
+				73B31718217F2D1C00775CCA /* setMenu.swift in Sources */,
 				7392102D217EDD3000DFC13C /* AppDelegate.swift in Sources */,
+				73B31714217F2C6100775CCA /* calorie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
