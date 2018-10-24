@@ -9,11 +9,21 @@
 import UIKit
 
 class addCalorie: UIViewController {
-
+    
+    
+    @IBOutlet weak var carolieName: UITextField!
+    
+    @IBOutlet weak var carolieNumber: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    @IBAction func addCarolie(_ sender: Any) {
     }
     
     

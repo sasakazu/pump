@@ -9,14 +9,25 @@
 import UIKit
 
 class addSetMenu: UIViewController {
+    
+    
+    @IBOutlet weak var trainingName: UITextField!
+    
+    @IBOutlet weak var set1Kg: UITextField!
+    @IBOutlet weak var set1Rep: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func addMenu(_ sender: Any) {
+        
+        
+    }
+    
  
 
 }
