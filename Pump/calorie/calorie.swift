@@ -9,8 +9,8 @@
 import UIKit
 
 class calorie: UIViewController {
+   
     
-
     @IBOutlet weak var todayDate: UILabel!
     
     @IBOutlet weak var totalCarolie: UILabel!
@@ -22,6 +22,9 @@ class calorie: UIViewController {
         todayDate.text = getNowClockString()
     
     }
+    
+    
+
     
 
     func getNowClockString() -> String {
