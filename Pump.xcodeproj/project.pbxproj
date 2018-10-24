@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7330DDF321802CEB00F86D72 /* daily.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF221802CEB00F86D72 /* daily.png */; };
+		7330DDF521802D4600F86D72 /* setmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF421802D4600F86D72 /* setmenu.png */; };
+		7330DDF721802D9300F86D72 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF621802D9300F86D72 /* more.png */; };
 		7392102D217EDD3000DFC13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392102C217EDD3000DFC13C /* AppDelegate.swift */; };
 		7392102F217EDD3000DFC13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392102E217EDD3000DFC13C /* ViewController.swift */; };
 		73921032217EDD3000DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921030217EDD3000DFC13C /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		3F38E5AB64F7A1659A5D123C /* Pods-Pump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.release.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.release.xcconfig"; sourceTree = "<group>"; };
+		7330DDF221802CEB00F86D72 /* daily.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daily.png; sourceTree = "<group>"; };
+		7330DDF421802D4600F86D72 /* setmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setmenu.png; sourceTree = "<group>"; };
+		7330DDF621802D9300F86D72 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
 		73921029217EDD3000DFC13C /* Pump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7392102C217EDD3000DFC13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7392102E217EDD3000DFC13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +73,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7330DDF121802CC500F86D72 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7330DDF221802CEB00F86D72 /* daily.png */,
+				7330DDF621802D9300F86D72 /* more.png */,
+				7330DDF421802D4600F86D72 /* setmenu.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		73921020217EDD3000DFC13C = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +111,7 @@
 				73B3171B217F2D5400775CCA /* setMenu */,
 				73B3171C217F2D7300775CCA /* calorie */,
 				73921033217EDD3100DFC13C /* Assets.xcassets */,
+				7330DDF121802CC500F86D72 /* images */,
 				73921035217EDD3100DFC13C /* LaunchScreen.storyboard */,
 				73921038217EDD3100DFC13C /* Info.plist */,
 			);
@@ -179,9 +196,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7330DDF721802D9300F86D72 /* more.png in Resources */,
+				7330DDF521802D4600F86D72 /* setmenu.png in Resources */,
 				73921037217EDD3100DFC13C /* LaunchScreen.storyboard in Resources */,
 				73921034217EDD3100DFC13C /* Assets.xcassets in Resources */,
 				73921032217EDD3000DFC13C /* Main.storyboard in Resources */,
+				7330DDF321802CEB00F86D72 /* daily.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
