@@ -9,22 +9,28 @@
 import UIKit
 
 class calorie: UIViewController {
+    
+
+    @IBOutlet weak var todayDate: UILabel!
+    
+    @IBOutlet weak var totalCarolie: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        todayDate.text = getNowClockString()
+    
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getNowClockString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM月dd日"
+        let now = Date()
+        return formatter.string(from: now)
     }
-    */
+    
+    
 
 }
