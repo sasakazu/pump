@@ -10,6 +10,7 @@
 		7330DDF321802CEB00F86D72 /* daily.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF221802CEB00F86D72 /* daily.png */; };
 		7330DDF521802D4600F86D72 /* setmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF421802D4600F86D72 /* setmenu.png */; };
 		7330DDF721802D9300F86D72 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 7330DDF621802D9300F86D72 /* more.png */; };
+		7370A807218305B8004783F8 /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7370A806218305B8004783F8 /* object.swift */; };
 		7392102D217EDD3000DFC13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392102C217EDD3000DFC13C /* AppDelegate.swift */; };
 		7392102F217EDD3000DFC13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392102E217EDD3000DFC13C /* ViewController.swift */; };
 		73921032217EDD3000DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921030217EDD3000DFC13C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		7330DDF221802CEB00F86D72 /* daily.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daily.png; sourceTree = "<group>"; };
 		7330DDF421802D4600F86D72 /* setmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setmenu.png; sourceTree = "<group>"; };
 		7330DDF621802D9300F86D72 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		7370A806218305B8004783F8 /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
 		73921029217EDD3000DFC13C /* Pump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7392102C217EDD3000DFC13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7392102E217EDD3000DFC13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		7370A80521830570004783F8 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				7370A806218305B8004783F8 /* object.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
 		73921020217EDD3000DFC13C = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 				73921030217EDD3000DFC13C /* Main.storyboard */,
 				73B31719217F2D3B00775CCA /* more.swift */,
 				73B3171B217F2D5400775CCA /* setMenu */,
+				7370A80521830570004783F8 /* database */,
 				73B3171C217F2D7300775CCA /* calorie */,
 				73921033217EDD3100DFC13C /* Assets.xcassets */,
 				7330DDF121802CC500F86D72 /* images */,
@@ -240,12 +251,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pump/Pods-Pump-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,6 +278,7 @@
 				7392102F217EDD3000DFC13C /* ViewController.swift in Sources */,
 				73B31718217F2D1C00775CCA /* setMenu.swift in Sources */,
 				7392102D217EDD3000DFC13C /* AppDelegate.swift in Sources */,
+				7370A807218305B8004783F8 /* object.swift in Sources */,
 				73B31714217F2C6100775CCA /* calorie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -119,7 +119,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wIx-VA-Nsk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="wIx-VA-Nsk">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wIx-VA-Nsk" id="dMW-TP-gi0">
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShW-MW-AqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032.8" y="233.43328335832086"/>
+            <point key="canvasLocation" x="1220" y="244"/>
         </scene>
         <!--Daily-->
         <scene sceneID="aXb-bY-DhU">
@@ -395,8 +395,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgI-0o-LTg">
-                                <rect key="frame" x="168" y="146" width="38" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgI-0o-LTg">
+                                <rect key="frame" x="124" y="146" width="120" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -427,7 +427,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6QZ-cN-PHB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6QZ-cN-PHB">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6QZ-cN-PHB" id="fTz-62-Jx1">
@@ -442,7 +442,9 @@
                         <viewLayoutGuide key="safeArea" id="eZt-RO-EO5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Daily" image="daily.png" id="BFc-e5-aWj"/>
+                    <navigationItem key="navigationItem" id="wJ0-fF-zbW"/>
                     <connections>
+                        <outlet property="carolieTableview" destination="TV0-f3-UVq" id="gyw-fM-sZ6"/>
                         <outlet property="todayDate" destination="BWh-TX-50g" id="gaL-NT-ZMg"/>
                         <outlet property="totalCarolie" destination="cgI-0o-LTg" id="Adl-Pz-o02"/>
                     </connections>
@@ -502,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yf2-T2-0ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032.8" y="-440.32983508245883"/>
+            <point key="canvasLocation" x="1220" y="-442"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eJK-if-Ty6">
@@ -514,8 +516,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="LAZ-b3-jnO" kind="relationship" relationship="viewControllers" id="Tdx-j8-Equ"/>
                         <segue destination="odZ-iS-z50" kind="relationship" relationship="viewControllers" id="2Ke-OD-x2K"/>
+                        <segue destination="LAZ-b3-jnO" kind="relationship" relationship="viewControllers" id="Tdx-j8-Equ"/>
                         <segue destination="4S7-93-Qgy" kind="relationship" relationship="viewControllers" id="C6R-j7-5YB"/>
                     </connections>
                 </tabBarController>

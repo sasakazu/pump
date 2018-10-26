@@ -8,4 +8,8 @@ target 'Pump' do
   # Pods for Pump
 
   pod 'Realm'
+  pod 'RealmSwift'
+  
+  
+  
 end
