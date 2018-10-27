@@ -53,5 +53,26 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
 
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        
+        if(editingStyle == UITableViewCell.EditingStyle.delete) {
+            do{
+                let realm = try Realm()
+                try realm.write {
+                    realm.delete(self.carolieItem[indexPath.row])
+                }
+                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.fade)
+            }catch{
+            }
+            
+            tableView.reloadData()
+        
+        }
+    }
+    
+    
+    
 
 }
