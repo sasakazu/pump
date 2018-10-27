@@ -1,0 +1,58 @@
+//
+//  carolieTable.swift
+//  Pump
+//
+//  Created by 笹倉 一也 on 2018/10/27.
+//  Copyright © 2018年 sasakura.company. All rights reserved.
+//
+
+import UIKit
+import RealmSwift
+
+class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var carolieItem: Results<Carolie>!
+    
+    
+    
+    @IBOutlet weak var carolieNumber: UILabel!
+    @IBOutlet weak var carolieTable: UITableView!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        do{
+            let realm = try Realm()
+            carolieItem = realm.objects(Carolie.self)
+            carolieTable.reloadData()
+        }catch{
+            
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        carolieTable.reloadData()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
+        
+        // todoItemの数 = セルの数
+        return carolieItem.count
+    }
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        
+        let object = carolieItem[indexpath.row]
+        
+        cell.textLabel?.text = object.name
+        
+        return cell
+    }
+
+
+}

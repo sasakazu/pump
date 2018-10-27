@@ -19,8 +19,3 @@ class Carolie: Object {
 }
 
 
-class ToDo: Object {
-    @objc dynamic var title = ""
-}
-
-

@@ -20,33 +20,31 @@ class addCalorie: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        carolieName.delegate = self
-    
+
+        
     }
     
     
     
     @IBAction func addCarolie(_ sender: Any) {
+        
+        let newCarolie = Carolie()
+        
+        newCarolie.name = carolieName.text!
      
-        let newTodo = ToDo()
-        
-        // textFieldに入力したデータをnewTodoのtitleに代入
-        newTodo.title = carolieName.text!
-        
-        // 上記で代入したテキストデータを永続化するための処理
         do{
             let realm = try Realm()
             try realm.write({ () -> Void in
-                realm.add(newTodo)
-                print("ToDo Saved")
+                realm.add(newCarolie)
+                print("成功！！")
             })
         }catch{
-            print("Save is Faild")
+            print("失敗！！！")
         }
         
-        dismiss(animated: true, completion: nil)
-   
-    
+        self.dismiss(animated: true, completion: nil)
+        
+        
     }
     
     
