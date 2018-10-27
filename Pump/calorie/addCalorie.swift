@@ -31,6 +31,7 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         let newCarolie = Carolie()
         
         newCarolie.name = carolieName.text!
+       
      
         do{
             let realm = try Realm()
