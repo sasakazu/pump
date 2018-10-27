@@ -20,18 +20,16 @@ class addCalorie: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
     }
     
-    
+
     
     @IBAction func addCarolie(_ sender: Any) {
         
         let newCarolie = Carolie()
         
         newCarolie.name = carolieName.text!
-       
+        newCarolie.number = Int(carolieNumber.text!)!
      
         do{
             let realm = try Realm()
