@@ -128,12 +128,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LAZ-b3-jnO" id="Ebu-OK-rrv"/>
+                                    <outlet property="delegate" destination="LAZ-b3-jnO" id="vxy-gA-i3R"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BhD-SS-GuS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SetMenu" image="setmenu.png" id="jIN-Ho-7vL"/>
+                    <connections>
+                        <outlet property="trainigTable" destination="AFW-gu-2Kr" id="Lea-ca-Wy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d25-E3-3q6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

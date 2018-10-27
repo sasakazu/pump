@@ -26,6 +26,21 @@ class addSetMenu: UIViewController {
     
     @IBAction func addMenu(_ sender: Any) {
         
+        let newMenu = Training()
+        
+        newMenu.name = trainingName.text!
+        
+        do{
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(newMenu)
+                print("成功！！")
+            })
+        }catch{
+            print("失敗！！！")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     

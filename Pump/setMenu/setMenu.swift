@@ -7,15 +7,53 @@
 //
 
 import UIKit
+import RealmSwift
 
-class setMenu: UIViewController {
+
+class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var trainingItem: Results<Training>!
+    
+    @IBOutlet weak var trainigTable: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        do{
+            let realm = try Realm()
+            trainingItem = realm.objects(Training.self)
+            trainigTable.reloadData()
+        }catch{
+            
+        }
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        trainigTable.reloadData()
     }
     
 
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
+        
+        return trainingItem.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        
+        let object = trainingItem[indexpath.row]
+        
+        cell.textLabel?.text = object.name
+        
+        return cell
+        
+        
+    }
 
 }

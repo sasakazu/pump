@@ -14,8 +14,14 @@ import RealmSwift
 class Carolie: Object {
     @objc dynamic var name = ""
     @objc dynamic var number = ""
-
-
 }
+
+
+class Training: Object {
+    @objc dynamic var name = ""
+    @objc dynamic var set1KG = ""
+}
+
+
 
 
