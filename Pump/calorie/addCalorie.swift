@@ -29,7 +29,7 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         let newCarolie = Carolie()
         
         newCarolie.name = carolieName.text!
-        newCarolie.number = Int(carolieNumber.text!)!
+//        newCarolie.number = Int(carolieNumber.text!)!
      
         do{
             let realm = try Realm()
@@ -41,7 +41,7 @@ class addCalorie: UIViewController, UITextFieldDelegate {
             print("失敗！！！")
         }
         
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
         
     }

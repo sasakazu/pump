@@ -12,7 +12,7 @@ import RealmSwift
 class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var carolieItem: Results<Carolie>!
-    
+    var selectedImage:String?
   
     @IBOutlet weak var carolieNumber: UILabel!
     @IBOutlet weak var carolieTable: UITableView!
@@ -28,6 +28,9 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
             
           
         }
+        
+        carolieTable.delegate = self
+        carolieTable.dataSource = self
         
     }
     
@@ -74,6 +77,30 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let object = carolieItem[indexPath.row]
+        
+        selectedImage = object.name
+        
+        performSegue(withIdentifier: "carolieDetail",sender: nil)
+        
+    }
+    
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "carolieDetail") {
+            
+            
+            let secondVC: carolieDetail = (segue.destination as? carolieDetail)!
+            
+            
+            secondVC.selectedImg = selectedImage!
+        
+        }
+    
+    }
     
 
 }
