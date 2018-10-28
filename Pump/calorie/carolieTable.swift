@@ -79,29 +79,29 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let object = carolieItem[indexPath.row]
-        
-        selectedImage = object.name
-        
-        performSegue(withIdentifier: "carolieDetail",sender: nil)
-        
-    }
-    
-    
-   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "carolieDetail") {
-            
-            
-            let secondVC: carolieDetail = (segue.destination as? carolieDetail)!
-            
-            
-            secondVC.selectedImg = selectedImage!
-        
-        }
-    
-    }
-    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        let object = carolieItem[indexPath.row]
+//
+//        selectedImage = object.name
+//
+//        performSegue(withIdentifier: "carolieDetail",sender: nil)
+//        
+//    }
+//    
+//    
+//   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+//        if (segue.identifier == "carolieDetail") {
+//            
+//            
+//            let secondVC: carolieDetail = (segue.destination as? carolieDetail)!
+//            
+//            
+//            secondVC.selectedImg = selectedImage!
+//        
+//        }
+//    
+//    }
+//    
 
 }

@@ -16,8 +16,18 @@ class addSetMenu: UIViewController {
     
     @IBOutlet weak var set1Kg: UITextField!
     @IBOutlet weak var set1Rep: UITextField!
+    @IBOutlet weak var set2Kg: UITextField!
+    @IBOutlet weak var set2Rep: UITextField!
+    @IBOutlet weak var set3Kg: UITextField!
+    @IBOutlet weak var set3Rep: UITextField!
+    @IBOutlet weak var set4Kg: UITextField!
+    @IBOutlet weak var set4Rep: UITextField!
+    @IBOutlet weak var set5Kg: UITextField!
+    @IBOutlet weak var set5Rep: UITextField!
     
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
