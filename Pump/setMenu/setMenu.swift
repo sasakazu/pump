@@ -14,6 +14,7 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var trainingItem: Results<Training>!
     var trainingName:String = ""
+    var training1setKG:String = ""
     
     @IBOutlet weak var trainigTable: UITableView!
     
@@ -83,6 +84,9 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         trainingName = object.name
         
+        training1setKG = object.set1KG
+        
+        
         performSegue(withIdentifier: "setMenuDetail",sender: nil)
         
     }
@@ -96,6 +100,7 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             
             secondVC.trainingName = trainingName
+            secondVC.training1setKG = training1setKG
             
         }
         

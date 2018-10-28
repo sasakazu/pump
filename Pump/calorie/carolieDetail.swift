@@ -17,22 +17,12 @@ class carolieDetail: UIViewController {
     @IBOutlet weak var carolieName: UILabel!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let realm = try! Realm()
-//
-//        let carolieNames = realm.objects(Carolie.self)
-//
-//        for carolieName in carolieNames {
-//            print("name: \(carolieName.name)")
-        
         carolieName.text = selectedImg
        
-//    }
-}
-
+    }
 
 
 }

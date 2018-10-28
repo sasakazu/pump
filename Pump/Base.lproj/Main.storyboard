@@ -197,6 +197,7 @@
                         <viewLayoutGuide key="safeArea" id="BhD-SS-GuS"/>
                     </view>
                     <navigationItem key="navigationItem" title="Set Menu" id="ykQ-EG-m2M">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="zAh-MZ-6fJ"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mir-ql-Q6v">
                             <connections>
                                 <segue destination="GbE-X6-vlY" kind="show" id="jdr-nT-MbK"/>
@@ -438,12 +439,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1set KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-fQ-bTL">
+                                <rect key="frame" x="131" y="253" width="100" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zP4-Yp-H2V"/>
                     </view>
                     <navigationItem key="navigationItem" title="トレーニング詳細" id="m3u-Qk-wAM"/>
                     <connections>
+                        <outlet property="set1KGLabel" destination="3aS-fQ-bTL" id="tTo-sy-UHo"/>
                         <outlet property="trainingNameLabel" destination="QbU-PK-wEK" id="fQc-DN-OEY"/>
                     </connections>
                 </viewController>
@@ -451,7 +460,7 @@
             </objects>
             <point key="canvasLocation" x="2716" y="296"/>
         </scene>
-        <!--Carolie Table-->
+        <!--カロリー-->
         <scene sceneID="aXb-bY-DhU">
             <objects>
                 <viewController id="odZ-iS-z50" customClass="carolieTable" customModule="Pump" customModuleProvider="target" sceneMemberID="viewController">
@@ -520,8 +529,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-ig-V8D">
-                                                    <rect key="frame" x="319" y="11" width="21" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-ig-V8D">
+                                                    <rect key="frame" x="283" y="11" width="57" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="57" id="z4M-nM-gG4"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -544,7 +556,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eZt-RO-EO5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wJ0-fF-zbW">
+                    <navigationItem key="navigationItem" title="カロリー" id="wJ0-fF-zbW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vpQ-K3-PmG">
                             <connections>
                                 <segue destination="HTA-9T-Tf1" kind="show" id="ocT-fw-MM3"/>
