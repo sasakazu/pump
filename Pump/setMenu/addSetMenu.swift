@@ -40,7 +40,7 @@ class addSetMenu: UIViewController {
             print("失敗！！！")
         }
         
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     

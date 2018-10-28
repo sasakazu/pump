@@ -13,6 +13,7 @@ import RealmSwift
 class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var trainingItem: Results<Training>!
+    var trainingName:String = ""
     
     @IBOutlet weak var trainigTable: UITableView!
     
@@ -75,6 +76,30 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let object = trainingItem[indexPath.row]
+        
+        trainingName = object.name
+        
+        performSegue(withIdentifier: "setMenuDetail",sender: nil)
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "setMenuDetail") {
+            
+            
+            let secondVC: setMenuDetail = (segue.destination as? setMenuDetail)!
+            
+            
+            secondVC.trainingName = trainingName
+            
+        }
+        
+    }
     
     
 
