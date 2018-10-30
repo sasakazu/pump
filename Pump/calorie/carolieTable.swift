@@ -21,13 +21,15 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         navigationItem.leftBarButtonItem = editButtonItem
         do{
             let realm = try Realm()
             carolieItem = realm.objects(Carolie.self)
             carolieTable.reloadData()
         }catch{
             
-          
+
         }
         
         carolieTable.delegate = self
@@ -77,6 +79,15 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        carolieTable.isEditing = editing
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -102,6 +113,11 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
 //        }
 //    
 //    }
-//    
+//
+    
+    
+    
+    
+    
 
 }
