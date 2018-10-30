@@ -13,6 +13,8 @@ import RealmSwift
 class addCalorie: UIViewController, UITextFieldDelegate {
     
     
+    var testText:Int = 0
+    
     @IBOutlet weak var carolieName: UITextField!
     
     @IBOutlet weak var carolieNumber: UITextField!
@@ -28,8 +30,10 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         
         let newCarolie = Carolie()
         
+        testText = Int(carolieNumber.text!)!
+        
         newCarolie.name = carolieName.text!
-
+        newCarolie.number = testText
      
         do{
             let realm = try Realm()
@@ -40,6 +44,8 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         }catch{
             print("失敗！！！")
         }
+        
+        
         
         self.navigationController?.popViewController(animated: true)
         

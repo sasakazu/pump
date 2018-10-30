@@ -12,7 +12,7 @@ import RealmSwift
 class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var carolieItem: Results<Carolie>!
-    var selectedImage:String?
+    var selectedImage:Int = 0
   
     @IBOutlet weak var carolieNumber: UILabel!
     @IBOutlet weak var carolieTable: UITableView!
@@ -25,15 +25,30 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
          navigationItem.leftBarButtonItem = editButtonItem
         do{
             let realm = try Realm()
+
             carolieItem = realm.objects(Carolie.self)
+           
+//            for dog in dogs {
+//
+//           print("カロリー数: \(dog.number)")
+//
+////           carolieNumber.text = String(dog.number)
+//
+//            }
+        
             carolieTable.reloadData()
-        }catch{
             
+            
+        }catch{
+        
 
         }
         
         carolieTable.delegate = self
         carolieTable.dataSource = self
+        
+        
+        
         
     }
     
@@ -45,21 +60,40 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
         
-        // todoItemの数 = セルの数
+        let realm = try! Realm()
+        
+         let carolieItem = realm.objects(Carolie.self)
+        
         return carolieItem.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+
+        // tableCell の ID で UITableViewCell のインスタンスを生成
+        let cell = carolieTable.dequeueReusableCell(withIdentifier: "Cell",
+                                                    for: indexpath)
+        
+        let realm = try! Realm()
+        
+        let carolieItem = realm.objects(Carolie.self)
         
         let object = carolieItem[indexpath.row]
         
-        cell.textLabel?.text = object.name
+        let label1 = cell.viewWithTag(1) as! UILabel
+        label1.text = object.name
+
+        let label2 = cell.viewWithTag(2) as! UILabel
+        label2.text = "\(String(object.number)) cal"
+        
         
         return cell
+        
+    
     }
 
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
