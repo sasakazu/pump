@@ -39,14 +39,28 @@ class addSetMenu: UIViewController {
         let newMenu = Training()
         
         newMenu.name = trainingName.text!
+        
         newMenu.set1KG = set1Kg.text!
+        newMenu.set1Rep = set1Rep.text!
+        
+        newMenu.set2KG = set2Kg.text!
+        newMenu.set2Rep = set2Rep.text!
+        
+        newMenu.set3KG = set3Kg.text!
+        newMenu.set3Rep = set3Rep.text!
+        
+        newMenu.set4KG = set4Kg.text!
+        newMenu.set4Rep = set4Rep.text!
+        
+        newMenu.set5KG = set5Kg.text!
+        newMenu.set5Rep = set5Rep.text!
+        
         
         do{
             let realm = try Realm()
             try realm.write({ () -> Void in
                 realm.add(newMenu)
-                print("\(newMenu.name)保存成功！！")
-                print("\(newMenu.set1KG)保存成功！！")
+                print("成功！！")
                 
             })
         }catch{

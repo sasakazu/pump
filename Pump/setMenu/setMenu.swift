@@ -14,7 +14,22 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var trainingItem: Results<Training>!
     var trainingName:String = ""
+    
     var training1setKG:String = ""
+    var training1setRep:String = ""
+    
+    var training2setKG:String = ""
+    var training2setRep:String = ""
+    
+    var training3setKG:String = ""
+    var training3setRep:String = ""
+    
+    var training4setKG:String = ""
+    var training4setRep:String = ""
+    
+    var training5setKG:String = ""
+    var training5setRep:String = ""
+    
     
     @IBOutlet weak var trainigTable: UITableView!
     
@@ -85,7 +100,19 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         trainingName = object.name
         
         training1setKG = object.set1KG
+        training1setRep = object.set1Rep
         
+        training2setKG = object.set2KG
+        training2setRep = object.set2Rep
+        
+        training3setKG = object.set3KG
+        training3setRep = object.set3Rep
+        
+        training4setKG = object.set4KG
+        training4setRep = object.set4Rep
+        
+        training5setKG = object.set5KG
+        training5setRep = object.set5Rep
         
         performSegue(withIdentifier: "setMenuDetail",sender: nil)
         
@@ -100,8 +127,23 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             
             secondVC.trainingName = trainingName
-            secondVC.training1setKG = training1setKG
             
+            secondVC.training1setKG = training1setKG
+            secondVC.training1setRep = training1setRep
+            
+            secondVC.training2setKG = training2setKG
+            secondVC.training2setRep = training2setRep
+            
+            secondVC.training3setKG = training3setKG
+            secondVC.training3setRep = training3setRep
+            
+            secondVC.training4setKG = training4setKG
+            secondVC.training4setRep = training4setRep
+            
+            secondVC.training5setKG = training5setKG
+            secondVC.training5setRep = training5setRep
+        
+        
         }
         
     }

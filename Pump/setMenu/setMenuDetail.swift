@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 class setMenuDetail: UIViewController {
     
     var trainingName:String = ""
+    
     var training1setKG:String = ""
+    var training1setRep:String = ""
+    
+    var training2setKG:String = ""
+    var training2setRep:String = ""
+    
+    var training3setKG:String = ""
+    var training3setRep:String = ""
+    
+    var training4setKG:String = ""
+    var training4setRep:String = ""
+    
+    var training5setKG:String = ""
+    var training5setRep:String = ""
+    
     
     @IBOutlet weak var trainingNameLabel: UILabel!
    
@@ -31,8 +47,21 @@ class setMenuDetail: UIViewController {
         super.viewDidLoad()
         
         trainingNameLabel.text = trainingName
-        set1KGLabel.text = "\(training1setKG)Kg"
         
+        set1KGLabel.text = "\(training1setKG)Kg"
+        set1RepLabel.text = "\(training1setRep)Rep"
+        
+        set2KGLabel.text = "\(training2setKG)Kg"
+        set2RepLabel.text = "\(training2setRep)Rep"
+        
+        set3KGLabel.text = "\(training3setKG)Kg"
+        set3RepLabel.text = "\(training3setRep)Rep"
+        
+        set4KGLabel.text = "\(training4setKG)Kg"
+        set4RepLabel.text = "\(training4setRep)Rep"
+        
+        set5KGLabel.text = "\(training5setKG)Kg"
+        set5RepLabel.text = "\(training5setRep)Rep"
         
     }
     

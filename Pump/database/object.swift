@@ -19,7 +19,23 @@ class Carolie: Object {
 
 class Training: Object {
     @objc dynamic var name = ""
+    
     @objc dynamic var set1KG = ""
+    @objc dynamic var set1Rep = ""
+    
+    @objc dynamic var set2KG = ""
+    @objc dynamic var set2Rep = ""
+
+    @objc dynamic var set3KG = ""
+    @objc dynamic var set3Rep = ""
+
+    @objc dynamic var set4KG = ""
+    @objc dynamic var set4Rep = ""
+
+    @objc dynamic var set5KG = ""
+    @objc dynamic var set5Rep = ""
+
+    
 }
 
 
