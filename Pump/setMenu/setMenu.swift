@@ -33,17 +33,16 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var trainigTable: UITableView!
     
-
+    
+    @IBOutlet weak var editBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+         let realm = try! Realm()
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+        trainingItem = realm.objects(Training.self).sorted(byKeyPath: "order")
 
-        do{
-            let realm = try Realm()
-            trainingItem = realm.objects(Training.self)
-            trainigTable.reloadData()
-        }catch{
-            
-        }
         
     }
     
@@ -149,5 +148,66 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    
+    @IBAction func editTapped(_ sender: Any) {
+        
+        
+    }
+    
 
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        trainigTable.isEditing = editing
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let realm = try! Realm()
+
+        try! realm.write {
+            let sourceObject = trainingItem[sourceIndexPath.row]
+            let destinationObject = trainingItem[destinationIndexPath.row]
+            
+            let destinationObjectOrder = destinationObject.order
+            
+            if sourceIndexPath.row < destinationIndexPath.row {
+                // 上から下に移動した場合、間の項目を上にシフト
+                for index in sourceIndexPath.row...destinationIndexPath.row {
+                    let object = trainingItem[index]
+                    object.order -= 1
+                }
+            } else {
+                // 下から上に移動した場合、間の項目を下にシフト
+                for index in (destinationIndexPath.row..<sourceIndexPath.row).reversed() {
+                    let object = trainingItem[index]
+                    object.order += 1
+                }
+            }
+        
+            sourceObject.order = destinationObjectOrder
+            
+            
+
+    }
+    
+  }
+    
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+
+    func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
 }

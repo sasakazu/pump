@@ -18,6 +18,9 @@ class Carolie: Object {
 
 
 class Training: Object {
+    
+    @objc dynamic var order = 0
+    
     @objc dynamic var name = ""
     
     @objc dynamic var set1KG = ""
