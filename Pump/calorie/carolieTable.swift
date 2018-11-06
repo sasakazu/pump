@@ -48,7 +48,7 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         carolieTable.dataSource = self
         
         
-        
+          print(Realm.Configuration.defaultConfiguration.fileURL!)
         
     }
     

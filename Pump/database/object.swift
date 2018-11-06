@@ -38,6 +38,10 @@ class Training: Object {
     @objc dynamic var set5KG = ""
     @objc dynamic var set5Rep = ""
 
+//    override static func primaryKey() -> String? {
+//        return "name"
+//    }
+    
     
 }
 

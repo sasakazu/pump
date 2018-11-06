@@ -46,6 +46,8 @@ class setMenuDetail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         trainingNameLabel.text = trainingName
         
         set1KGLabel.text = "\(training1setKG)Kg"
@@ -66,6 +68,36 @@ class setMenuDetail: UIViewController {
     }
     
 
-  
+    @IBAction func editBtn(_ sender: Any) {
+         performSegue(withIdentifier: "goEditSetMenu",sender: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "goEditSetMenu") {
+            
+            
+            let editVC: editSetMenu = (segue.destination as? editSetMenu)!
+            
+            
+            editVC.setNamePlaceholder = trainingNameLabel.text!
+            
+            editVC.set1KgPlaceholder = training1setKG
+            editVC.set1RepPlaceholder = training1setRep
+            editVC.set2KgPlaceholder = training2setKG
+            editVC.set2RepPlaceholder = training2setRep
+            editVC.set3KgPlaceholder = training3setKG
+            editVC.set3RepPlaceholder = training3setRep
+            editVC.set4KgPlaceholder = training4setKG
+            editVC.set4RepPlaceholder = training4setRep
+            editVC.set5KgPlaceholder = training5setKG
+            editVC.set5RepPlaceholder = training5setRep
+            
+            
+            
+        }
+        
+    }
+    
 
 }

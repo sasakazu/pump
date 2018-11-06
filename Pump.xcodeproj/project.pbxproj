@@ -15,6 +15,7 @@
 		7338812D218464FC00BF776D /* carolieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338812C218464FC00BF776D /* carolieDetail.swift */; };
 		7338812F2185AF0F00BF776D /* setMenuDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338812E2185AF0F00BF776D /* setMenuDetail.swift */; };
 		7370A807218305B8004783F8 /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7370A806218305B8004783F8 /* object.swift */; };
+		73887E812191815800F20E01 /* editSetMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73887E802191815800F20E01 /* editSetMenu.swift */; };
 		7392102D217EDD3000DFC13C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392102C217EDD3000DFC13C /* AppDelegate.swift */; };
 		7392102F217EDD3000DFC13C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392102E217EDD3000DFC13C /* ViewController.swift */; };
 		73921032217EDD3000DFC13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73921030217EDD3000DFC13C /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		7338812C218464FC00BF776D /* carolieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carolieDetail.swift; sourceTree = "<group>"; };
 		7338812E2185AF0F00BF776D /* setMenuDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setMenuDetail.swift; sourceTree = "<group>"; };
 		7370A806218305B8004783F8 /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
+		73887E802191815800F20E01 /* editSetMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editSetMenu.swift; sourceTree = "<group>"; };
 		73921029217EDD3000DFC13C /* Pump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7392102C217EDD3000DFC13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7392102E217EDD3000DFC13C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		73B3171B217F2D5400775CCA /* setMenu */ = {
 			isa = PBXGroup;
 			children = (
+				73887E802191815800F20E01 /* editSetMenu.swift */,
 				7338812E2185AF0F00BF776D /* setMenuDetail.swift */,
 				73B31717217F2D1C00775CCA /* setMenu.swift */,
 				73B31715217F2CDF00775CCA /* addSetMenu.swift */,
@@ -300,6 +303,7 @@
 				7392102D217EDD3000DFC13C /* AppDelegate.swift in Sources */,
 				7370A807218305B8004783F8 /* object.swift in Sources */,
 				7338812821841DDB00BF776D /* carolieTable.swift in Sources */,
+				73887E812191815800F20E01 /* editSetMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = Pump/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNAV5S2KU6;
 				INFOPLIST_FILE = Pump/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
