@@ -40,6 +40,8 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
          let realm = try! Realm()
         
+        self.trainigTable.rowHeight = 53.0
+        
         navigationItem.leftBarButtonItem = editButtonItem
         trainingItem = realm.objects(Training.self).sorted(byKeyPath: "order")
 
