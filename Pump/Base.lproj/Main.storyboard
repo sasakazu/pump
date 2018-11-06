@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--More-->
         <scene sceneID="EAB-jN-Ey1">
             <objects>
                 <tableViewController id="435-kq-MdY" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                             <outlet property="delegate" destination="435-kq-MdY" id="2Mz-cu-RyP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="J31-uN-XPS"/>
+                    <navigationItem key="navigationItem" title="More" id="HJz-o8-3iQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8O-eJ-aeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,11 +173,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="wIx-VA-Nsk">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="64" id="wIx-VA-Nsk">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wIx-VA-Nsk" id="dMW-TP-gi0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -967,33 +967,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yf2-T2-0ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2007" y="-442"/>
-        </scene>
-        <!--Carolie Detail-->
-        <scene sceneID="Myr-qB-EGw">
-            <objects>
-                <viewController id="YtQ-dh-TDU" customClass="carolieDetail" customModule="Pump" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w03-ht-d5A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カロリーネーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0R-fP-bUy">
-                                <rect key="frame" x="16" y="109" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="c9e-m6-8nX"/>
-                    </view>
-                    <connections>
-                        <outlet property="carolieName" destination="C0R-fP-bUy" id="fV4-zx-FH2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r9S-Aa-S4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2716" y="-442"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eJK-if-Ty6">
