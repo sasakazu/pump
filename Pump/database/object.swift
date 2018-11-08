@@ -12,6 +12,7 @@ import RealmSwift
 
 
 class Carolie: Object {
+    @objc dynamic var todayTime = ""
     @objc dynamic var name = ""
     @objc dynamic var number = 0
 }
