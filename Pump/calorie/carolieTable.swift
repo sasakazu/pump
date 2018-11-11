@@ -13,28 +13,33 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     var carolieItem: Results<Carolie>!
     var selectedImage:Int = 0
+    var todayDate:String = ""
   
     @IBOutlet weak var carolieNumber: UILabel!
     @IBOutlet weak var carolieTable: UITableView!
-
-        
+    @IBOutlet weak var today: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.leftBarButtonItem = editButtonItem
+        
+        let date:Date = Date()
+        
+        let format = DateFormatter()
+        format.dateFormat = "MM月dd日"
+        
+        todayDate = format.string(from: date)
+        
+        today.text = todayDate
+        
+        
         do{
             let realm = try Realm()
 
             carolieItem = realm.objects(Carolie.self)
-           
-//            for dog in dogs {
-//
-//           print("カロリー数: \(dog.number)")
-//
-////           carolieNumber.text = String(dog.number)
-//
-//            }
+        
         
             carolieTable.reloadData()
             
@@ -58,6 +63,15 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     
+    @IBAction func yesterday(_ sender: Any) {
+    }
+    
+    
+    @IBAction func tommorowBtn(_ sender: Any) {
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
         
         let realm = try! Realm()
@@ -69,9 +83,7 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
 
-        // tableCell の ID で UITableViewCell のインスタンスを生成
         let cell = carolieTable.dequeueReusableCell(withIdentifier: "Cell",
                                                     for: indexpath)
         
@@ -124,30 +136,27 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        let object = carolieItem[indexPath.row]
-//
-//        selectedImage = object.name
-//
-//        performSegue(withIdentifier: "carolieDetail",sender: nil)
-//        
-//    }
-//    
-//    
-//   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-//        if (segue.identifier == "carolieDetail") {
-//            
-//            
-//            let secondVC: carolieDetail = (segue.destination as? carolieDetail)!
-//            
-//            
-//            secondVC.selectedImg = selectedImage!
-//        
-//        }
-//    
-//    }
-//
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
+        performSegue(withIdentifier: "gotoAddCarolie",sender: nil)
+        
+    }
+    
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "gotoAddCarolie") {
+            
+            
+            let addVC: addCalorie = (segue.destination as? addCalorie)!
+            
+            
+            addVC.getDate = todayDate
+        
+        }
+    
+    }
+
     
     
     

@@ -12,15 +12,20 @@ import RealmSwift
 
 class addCalorie: UIViewController, UITextFieldDelegate {
     
+    var getDate:String = ""
     
     var testText:Int = 0
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var carolieName: UITextField!
-    
     @IBOutlet weak var carolieNumber: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateLabel.text = getDate
         
     }
     
@@ -34,7 +39,8 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         
         newCarolie.name = carolieName.text!
         newCarolie.number = testText
-     
+        newCarolie.todayTime = getDate
+        
         do{
             let realm = try Realm()
             try realm.write({ () -> Void in
