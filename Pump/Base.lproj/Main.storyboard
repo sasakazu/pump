@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="men.png" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-hY-d0l">
-                                                    <rect key="frame" x="16" y="8" width="27" height="27"/>
+                                                    <rect key="frame" x="16" y="9" width="27" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アカウント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN3-63-wG5">
@@ -50,7 +50,23 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3V3-pO-amD" id="I7G-6L-mcU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="万数計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It8-Y9-5WW">
+                                                    <rect key="frame" x="55" y="11" width="52" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ウォーキングアイコン3.png" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-jy-h74">
+                                                    <rect key="frame" x="16" y="8" width="27" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lHj-Iz-liv" kind="show" id="bep-tJ-XgH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MgM-3o-P3G">
                                         <rect key="frame" x="0.0" y="94" width="375" height="44"/>
@@ -73,6 +89,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8O-eJ-aeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-628" y="1736.5817091454273"/>
+        </scene>
+        <!--万歩計-->
+        <scene sceneID="OT4-mr-JWm">
+            <objects>
+                <viewController id="lHj-Iz-liv" customClass="working" customModule="Pump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HMS-C1-qBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33歩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdK-kD-NNm">
+                                <rect key="frame" x="16" y="314.5" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r3L-gQ-hIh" firstAttribute="trailing" secondItem="gdK-kD-NNm" secondAttribute="trailing" constant="16" id="9ou-wT-p8T"/>
+                            <constraint firstItem="gdK-kD-NNm" firstAttribute="leading" secondItem="r3L-gQ-hIh" secondAttribute="leading" constant="16" id="DSL-Wp-1i2"/>
+                            <constraint firstItem="gdK-kD-NNm" firstAttribute="centerY" secondItem="HMS-C1-qBL" secondAttribute="centerY" id="UYT-vT-Ojj"/>
+                            <constraint firstItem="gdK-kD-NNm" firstAttribute="centerX" secondItem="HMS-C1-qBL" secondAttribute="centerX" id="VMI-Zv-NlK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r3L-gQ-hIh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="working" id="hk8-Ne-brz"/>
+                    <navigationItem key="navigationItem" title="万歩計" id="CJP-B2-g5x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qod-gv-TKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="1736.5817091454273"/>
         </scene>
         <!--アカウント-->
         <scene sceneID="4Yv-mr-NcU">
@@ -992,7 +1039,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FF-Kt-kkb">
                                 <rect key="frame" x="245" y="74" width="30" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="&gt;&gt;"/>
+                                <state key="normal" title="&gt;"/>
                                 <connections>
                                     <action selector="tommorowBtn:" destination="odZ-iS-z50" eventType="touchUpInside" id="Yoh-Vq-Lyz"/>
                                 </connections>
@@ -1004,12 +1051,12 @@
                                     <constraint firstAttribute="height" constant="41" id="gsm-HW-sJ0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="&lt;&lt;"/>
+                                <state key="normal" title="&lt;"/>
                                 <connections>
                                     <action selector="yesterday:" destination="odZ-iS-z50" eventType="touchUpInside" id="XkI-20-viB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計00カロリー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgI-0o-LTg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="計00cal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgI-0o-LTg">
                                 <rect key="frame" x="78" y="146" width="219.5" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="FoJ-Kz-YFV"/>
@@ -1082,7 +1129,6 @@
                             <constraint firstItem="TV0-f3-UVq" firstAttribute="trailing" secondItem="eZt-RO-EO5" secondAttribute="trailing" id="QmF-3l-PYA"/>
                             <constraint firstItem="cgI-0o-LTg" firstAttribute="top" secondItem="2FF-Kt-kkb" secondAttribute="bottom" constant="31" id="RpL-7n-yu8"/>
                             <constraint firstItem="eZt-RO-EO5" firstAttribute="trailing" secondItem="2FF-Kt-kkb" secondAttribute="trailing" constant="100" id="T5r-hi-SUU"/>
-                            <constraint firstItem="cgI-0o-LTg" firstAttribute="top" secondItem="2FF-Kt-kkb" secondAttribute="bottom" constant="31" id="Yzk-zU-fjJ"/>
                             <constraint firstItem="TV0-f3-UVq" firstAttribute="top" secondItem="cgI-0o-LTg" secondAttribute="bottom" constant="29" id="aa2-Wk-jUu"/>
                             <constraint firstItem="TV0-f3-UVq" firstAttribute="leading" secondItem="eZt-RO-EO5" secondAttribute="leading" id="cen-Ms-NCc"/>
                             <constraint firstItem="5Rq-hD-UTG" firstAttribute="leading" secondItem="eZt-RO-EO5" secondAttribute="leading" constant="98" id="dYF-W6-G5Y"/>
@@ -1265,5 +1311,6 @@
         <image name="men.png" width="32" height="32"/>
         <image name="more.png" width="32" height="32"/>
         <image name="setmenu.png" width="32" height="32"/>
+        <image name="ウォーキングアイコン3.png" width="32" height="32"/>
     </resources>
 </document>
