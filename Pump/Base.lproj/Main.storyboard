@@ -98,7 +98,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33歩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdK-kD-NNm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00歩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdK-kD-NNm">
                                 <rect key="frame" x="16" y="314.5" width="343" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -116,6 +116,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="working" id="hk8-Ne-brz"/>
                     <navigationItem key="navigationItem" title="万歩計" id="CJP-B2-g5x"/>
+                    <connections>
+                        <outlet property="walkingCount" destination="gdK-kD-NNm" id="YSi-JK-Z1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qod-gv-TKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
