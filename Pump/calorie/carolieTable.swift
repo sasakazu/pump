@@ -38,27 +38,30 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         do{
             let realm = try Realm()
 
-            carolieItem = realm.objects(Carolie.self)
-        
-        
-            carolieTable.reloadData()
-            
-            
+
+            carolieItem = realm.objects(Carolie.self).filter("todayTime == %@", todayDate)
+
+//            carolieTable.reloadData()
+
+
         }catch{
-        
+
 
         }
         
+        
+        carolieTable.reloadData()
+    
         carolieTable.delegate = self
         carolieTable.dataSource = self
         
-        
-          print(Realm.Configuration.defaultConfiguration.fileURL!)
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         carolieTable.reloadData()
     }
     
@@ -74,11 +77,18 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
         
-        let realm = try! Realm()
+//        let realm = try! Realm()
+//
+//         let carolieItem = realm.objects(Carolie.self)
+//
+//        return carolieItem.count
         
-         let carolieItem = realm.objects(Carolie.self)
+        
+        
+//       let carolieItem = realm.objects(Carolie.self).filter("todayTime == %@", todayDate)
         
         return carolieItem.count
+        
     }
 
     
@@ -87,9 +97,9 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         let cell = carolieTable.dequeueReusableCell(withIdentifier: "Cell",
                                                     for: indexpath)
         
-        let realm = try! Realm()
-        
-        let carolieItem = realm.objects(Carolie.self)
+//        let realm = try! Realm()
+//
+//        let carolieItem = realm.objects(Carolie.self)
         
         let object = carolieItem[indexpath.row]
         
