@@ -27,21 +27,24 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         let date:Date = Date()
         
+        
+        
         let format = DateFormatter()
         format.dateFormat = "MM月dd日"
         
         todayDate = format.string(from: date)
         
         today.text = todayDate
-        
+      
         
         do{
             let realm = try Realm()
 
 
             carolieItem = realm.objects(Carolie.self).filter("todayTime == %@", todayDate)
-
-//            carolieTable.reloadData()
+            
+        
+            
 
 
         }catch{
@@ -77,15 +80,6 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
         
-//        let realm = try! Realm()
-//
-//         let carolieItem = realm.objects(Carolie.self)
-//
-//        return carolieItem.count
-        
-        
-        
-//       let carolieItem = realm.objects(Carolie.self).filter("todayTime == %@", todayDate)
         
         return carolieItem.count
         
@@ -97,9 +91,7 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         let cell = carolieTable.dequeueReusableCell(withIdentifier: "Cell",
                                                     for: indexpath)
         
-//        let realm = try! Realm()
-//
-//        let carolieItem = realm.objects(Carolie.self)
+
         
         let object = carolieItem[indexpath.row]
         
