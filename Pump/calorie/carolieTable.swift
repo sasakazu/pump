@@ -9,19 +9,29 @@
 import UIKit
 import RealmSwift
 
+
+
+
 class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var carolieItem: Results<Carolie>!
     var selectedImage:Int = 0
     var todayDate:String = ""
+    var sum:Int = 0
+    var sectionTitle:String = ""
   
     @IBOutlet weak var carolieNumber: UILabel!
     @IBOutlet weak var carolieTable: UITableView!
     @IBOutlet weak var today: UILabel!
     
+ 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        
         
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -34,7 +44,8 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         todayDate = format.string(from: date)
         
-        today.text = todayDate
+//        today.text = todayDate
+        self.navigationItem.title = todayDate
       
         
         do{
@@ -42,31 +53,57 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
 
 
             carolieItem = realm.objects(Carolie.self).filter("todayTime == %@", todayDate)
-            
         
-            
-
 
         }catch{
 
 
         }
         
+        do {
+            
+        
+        let realm = try! Realm()
+
+        let numbers = realm.objects(Carolie.self).filter("todayTime == %@", todayDate)
+
+
+        for number in numbers {
+
+            self.sum += number.number
+
+            sectionTitle = "合計\(String(self.sum))cal"
+
+        }
+    }
+        
+     
         
         carolieTable.reloadData()
-    
+        
         carolieTable.delegate = self
         carolieTable.dataSource = self
         
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+    print(Realm.Configuration.defaultConfiguration.fileURL!)
         
+    
     }
+    
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         carolieTable.reloadData()
+
+
+    
     }
+        
+
     
     
     @IBAction func yesterday(_ sender: Any) {
@@ -161,6 +198,20 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     
     
+    // Section数
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+   
+    
+    
+    func tableView(_ tableView: UITableView,
+                   titleForHeaderInSection section: Int) -> String? {
+        
+        return sectionTitle
+        
+    }
     
     
     

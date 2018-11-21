@@ -43,6 +43,7 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.trainigTable.rowHeight = 53.0
         
         navigationItem.leftBarButtonItem = editButtonItem
+        
         trainingItem = realm.objects(Training.self).sorted(byKeyPath: "order")
 
         
@@ -76,8 +77,8 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        
+
+
         if(editingStyle == UITableViewCell.EditingStyle.delete) {
             do{
                 let realm = try Realm()
@@ -86,12 +87,13 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
                 tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.fade)
             }catch{
+            
+
+            self.trainigTable.reloadData()
             }
-            
-            tableView.reloadData()
-            
         }
     }
+    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -200,7 +202,7 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
 
     }
-    
+
   }
     
     

@@ -40,17 +40,20 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         newCarolie.name = carolieName.text!
         newCarolie.number = testText
         newCarolie.todayTime = getDate
+
         
+
         do{
             let realm = try Realm()
             try realm.write({ () -> Void in
                 realm.add(newCarolie)
                 print("成功！！")
+                
+                
             })
         }catch{
             print("失敗！！！")
         }
-        
         
         
         self.navigationController?.popViewController(animated: true)
