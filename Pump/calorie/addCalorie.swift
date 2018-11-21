@@ -25,7 +25,8 @@ class addCalorie: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dateLabel.text = getDate
+//        dateLabel.text = getDate
+         self.navigationItem.title = getDate
         
     }
     

@@ -30,8 +30,6 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-        
         
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -88,8 +86,6 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         
     
     }
-    
-    
     
     
     
