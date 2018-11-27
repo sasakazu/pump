@@ -45,6 +45,10 @@ class setMenu: UIViewController, UITableViewDelegate, UITableViewDataSource {
         navigationItem.leftBarButtonItem = editButtonItem
         
         trainingItem = realm.objects(Training.self).sorted(byKeyPath: "order")
+        
+        
+        
+     
 
         
     }

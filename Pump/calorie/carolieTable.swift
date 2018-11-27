@@ -23,9 +23,11 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var carolieNumber: UILabel!
     @IBOutlet weak var carolieTable: UITableView!
     @IBOutlet weak var today: UILabel!
+
     
- 
-    
+    private let refreshControl = UIRefreshControl()
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,18 +79,43 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         
      
         
-        carolieTable.reloadData()
+//        carolieTable.reloadData()
         
         carolieTable.delegate = self
         carolieTable.dataSource = self
+   
+
         
+        
+    
     print(Realm.Configuration.defaultConfiguration.fileURL!)
         
+
+        
+        if #available(iOS 10.0, *) {
+            carolieTable.refreshControl = refreshControl
+        } else {
+            carolieTable.addSubview(refreshControl)
+        }
+        
+    refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
+    
+    
+    }
+
+    
+    
+    @objc private func refreshWeatherData(_ sender: UIRefreshControl) {
+     
+        carolieTable.reloadData()
+        refreshControl.endRefreshing()
+    
     
     }
     
     
     
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

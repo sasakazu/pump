@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (oldSchemaVersion < 1) {}
         })
         Realm.Configuration.defaultConfiguration = config
+        
+        FirebaseApp.configure()
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-5047644305890156~6850338485")
         
         return true
     

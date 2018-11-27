@@ -8,10 +8,14 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
+
+
 
 class addSetMenu: UIViewController {
     
     
+    @IBOutlet weak var admobView: UIView!
     @IBOutlet weak var trainingName: UITextField!
     
     @IBOutlet weak var set1Kg: UITextField!
@@ -30,7 +34,33 @@ class addSetMenu: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
+        let AdMobID = "ca-app-pub-5047644305890156~6850338485"
+        let TEST_ID = "ca-app-pub-3940256099942544/2934735716"
+        
+        let AdMobTest:Bool = true
+
+        
+        var admobView = GADBannerView()
+        
+        admobView = GADBannerView(adSize:kGADAdSizeBanner)
+        // iPhone X のポートレート決め打ちです
+        admobView.frame.origin = CGPoint(x:0, y:self.view.frame.size.height - admobView.frame.height - 84)
+        admobView.frame.size = CGSize(width:self.view.frame.width, height:admobView.frame.height)
+        
+        if AdMobTest {
+            admobView.adUnitID = TEST_ID
+        }
+        else{
+            admobView.adUnitID = AdMobID
+        }
+        
+        admobView.rootViewController = self
+        admobView.load(GADRequest())
+        
+        self.view.addSubview(admobView)
+        
     }
     
     

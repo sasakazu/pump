@@ -9,6 +9,8 @@ target 'Pump' do
 
   pod 'Realm'
   pod 'RealmSwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
   
   
   

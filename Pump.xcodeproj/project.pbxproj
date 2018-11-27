@@ -30,6 +30,7 @@
 		73B31716217F2CDF00775CCA /* addSetMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31715217F2CDF00775CCA /* addSetMenu.swift */; };
 		73B31718217F2D1C00775CCA /* setMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31717217F2D1C00775CCA /* setMenu.swift */; };
 		73B3171A217F2D3B00775CCA /* more.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31719217F2D3B00775CCA /* more.swift */; };
+		73E9FD3021AD3FF1007E58C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73E9FD2F21AD3FF0007E58C9 /* GoogleService-Info.plist */; };
 		FFFDBF5326FFFAD04114337D /* Pods_Pump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF1AA71D3D87ECE8AE8679D /* Pods_Pump.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		73B31715217F2CDF00775CCA /* addSetMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSetMenu.swift; sourceTree = "<group>"; };
 		73B31717217F2D1C00775CCA /* setMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setMenu.swift; sourceTree = "<group>"; };
 		73B31719217F2D3B00775CCA /* more.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = more.swift; sourceTree = "<group>"; };
+		73E9FD2F21AD3FF0007E58C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DF1AA71D3D87ECE8AE8679D /* Pods_Pump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE87B4B6531B57E3CDDD66 /* Pods-Pump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.debug.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 				7392102C217EDD3000DFC13C /* AppDelegate.swift */,
 				7392102E217EDD3000DFC13C /* ViewController.swift */,
 				73921030217EDD3000DFC13C /* Main.storyboard */,
+				73E9FD2F21AD3FF0007E58C9 /* GoogleService-Info.plist */,
 				73B3171B217F2D5400775CCA /* setMenu */,
 				7370A80521830570004783F8 /* database */,
 				73B3171C217F2D7300775CCA /* calorie */,
@@ -249,6 +252,7 @@
 				73921034217EDD3100DFC13C /* Assets.xcassets in Resources */,
 				73887E8521943F4100F20E01 /* men.png in Resources */,
 				73921032217EDD3000DFC13C /* Main.storyboard in Resources */,
+				73E9FD3021AD3FF1007E58C9 /* GoogleService-Info.plist in Resources */,
 				7330DDF321802CEB00F86D72 /* daily.png in Resources */,
 				73887E832191B40800F20E01 /* clock.png in Resources */,
 			);
@@ -288,15 +292,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pump/Pods-Pump-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
