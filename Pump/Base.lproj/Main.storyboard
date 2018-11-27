@@ -560,11 +560,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxq-Rg-gCo" customClass="GADBannerView">
-                                <rect key="frame" x="33" y="562" width="309" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.36876221110378549" green="1" blue="0.49265036363910408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -644,7 +639,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="admobView" destination="Pxq-Rg-gCo" id="NK7-qv-IEW"/>
                         <outlet property="set1Kg" destination="gxH-pA-dbN" id="qpU-sz-4FC"/>
                         <outlet property="set1Rep" destination="sSI-iU-yys" id="2YT-ri-MZw"/>
                         <outlet property="set2Kg" destination="pYr-eV-aL1" id="haI-P0-sv0"/>

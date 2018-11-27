@@ -15,7 +15,6 @@ import GoogleMobileAds
 class addSetMenu: UIViewController {
     
     
-    @IBOutlet weak var admobView: UIView!
     @IBOutlet weak var trainingName: UITextField!
     
     @IBOutlet weak var set1Kg: UITextField!
