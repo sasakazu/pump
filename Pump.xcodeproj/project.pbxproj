@@ -31,6 +31,7 @@
 		73B31718217F2D1C00775CCA /* setMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31717217F2D1C00775CCA /* setMenu.swift */; };
 		73B3171A217F2D3B00775CCA /* more.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B31719217F2D3B00775CCA /* more.swift */; };
 		73E9FD3021AD3FF1007E58C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73E9FD2F21AD3FF0007E58C9 /* GoogleService-Info.plist */; };
+		73E9FD3221AD565B007E58C9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E9FD3121AD565B007E58C9 /* icon.png */; };
 		FFFDBF5326FFFAD04114337D /* Pods_Pump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF1AA71D3D87ECE8AE8679D /* Pods_Pump.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		73B31717217F2D1C00775CCA /* setMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setMenu.swift; sourceTree = "<group>"; };
 		73B31719217F2D3B00775CCA /* more.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = more.swift; sourceTree = "<group>"; };
 		73E9FD2F21AD3FF0007E58C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73E9FD3121AD565B007E58C9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../image/icon.png; sourceTree = "<group>"; };
 		9DF1AA71D3D87ECE8AE8679D /* Pods_Pump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDE87B4B6531B57E3CDDD66 /* Pods-Pump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.debug.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				735C50712197E7D1003D7758 /* ウォーキングアイコン3.png */,
 				73887E822191B40800F20E01 /* clock.png */,
 				73887E8421943F4100F20E01 /* men.png */,
+				73E9FD3121AD565B007E58C9 /* icon.png */,
 				7330DDF221802CEB00F86D72 /* daily.png */,
 				7330DDF621802D9300F86D72 /* more.png */,
 				7330DDF421802D4600F86D72 /* setmenu.png */,
@@ -251,6 +254,7 @@
 				73921037217EDD3100DFC13C /* LaunchScreen.storyboard in Resources */,
 				73921034217EDD3100DFC13C /* Assets.xcassets in Resources */,
 				73887E8521943F4100F20E01 /* men.png in Resources */,
+				73E9FD3221AD565B007E58C9 /* icon.png in Resources */,
 				73921032217EDD3000DFC13C /* Main.storyboard in Resources */,
 				73E9FD3021AD3FF1007E58C9 /* GoogleService-Info.plist in Resources */,
 				7330DDF321802CEB00F86D72 /* daily.png in Resources */,
