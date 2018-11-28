@@ -32,6 +32,7 @@ class carolieTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.carolieTable.rowHeight = 50.0
         
         navigationItem.leftBarButtonItem = editButtonItem
         

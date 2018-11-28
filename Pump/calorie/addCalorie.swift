@@ -54,6 +54,9 @@ class addCalorie: UIViewController, UITextFieldDelegate {
         self.view.addSubview(admobView)
         
         
+        addToolBar(textField: carolieName)
+        addToolBar(textField: carolieNumber)
+        
     }
     
 
@@ -96,5 +99,37 @@ class addCalorie: UIViewController, UITextFieldDelegate {
     }
     
     
+    func addToolBar(textField: UITextField){
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(editSetMenu.donePressed))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(editSetMenu.cancelPressed))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+        
+        carolieName.delegate = self
+        carolieNumber.delegate = self
 
+        
+        carolieName.inputAccessoryView = toolBar
+        carolieNumber.inputAccessoryView = toolBar
+
+        
+    }
+    
+    
+    
+    @objc func donePressed(){
+        view.endEditing(true)
+    }
+    
+    @objc func cancelPressed(){
+        view.endEditing(true) // or do something
+    }
+    
+    
 }
