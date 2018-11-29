@@ -161,7 +161,7 @@ class editSetMenu: UIViewController, UITextFieldDelegate {
     }
     
     @objc func cancelPressed(){
-        view.endEditing(true) // or do something
+        view.endEditing(true)
     }
     
     

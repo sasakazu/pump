@@ -50,20 +50,20 @@ class setMenuDetail: UIViewController {
         
         trainingNameLabel.text = trainingName
         
-        set1KGLabel.text = "\(training1setKG)Kg"
-        set1RepLabel.text = "\(training1setRep)Rep"
+        set1KGLabel.text = "\(training1setKG) Kg"
+        set1RepLabel.text = "\(training1setRep) Rep"
         
-        set2KGLabel.text = "\(training2setKG)Kg"
-        set2RepLabel.text = "\(training2setRep)Rep"
+        set2KGLabel.text = "\(training2setKG) Kg"
+        set2RepLabel.text = "\(training2setRep) Rep"
         
-        set3KGLabel.text = "\(training3setKG)Kg"
-        set3RepLabel.text = "\(training3setRep)Rep"
+        set3KGLabel.text = "\(training3setKG) Kg"
+        set3RepLabel.text = "\(training3setRep) Rep"
         
-        set4KGLabel.text = "\(training4setKG)Kg"
-        set4RepLabel.text = "\(training4setRep)Rep"
+        set4KGLabel.text = "\(training4setKG) Kg"
+        set4RepLabel.text = "\(training4setRep) Rep"
         
-        set5KGLabel.text = "\(training5setKG)Kg"
-        set5RepLabel.text = "\(training5setRep)Rep"
+        set5KGLabel.text = "\(training5setKG) Kg"
+        set5RepLabel.text = "\(training5setRep) Rep"
         
     }
     
