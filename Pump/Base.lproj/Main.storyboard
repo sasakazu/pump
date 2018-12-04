@@ -180,17 +180,17 @@
                                     <constraint firstAttribute="height" constant="74" id="IqL-Xj-CMM"/>
                                     <constraint firstAttribute="width" constant="343" id="a9m-NU-ejL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiH-4i-UwQ">
-                                <rect key="frame" x="159" y="508" width="57" height="35"/>
+                                <rect key="frame" x="138" y="496" width="99" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8g9-oV-BNK"/>
-                                    <constraint firstAttribute="width" constant="57" id="Dk7-ZP-ylx"/>
+                                    <constraint firstAttribute="width" constant="99" id="Dk7-ZP-ylx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -199,18 +199,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.52029282005953537" blue="0.58535085166756029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.42806647747289361" blue="0.43168698638090286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MCa-jX-Ou7" firstAttribute="leading" secondItem="xGU-Xv-gXD" secondAttribute="leading" constant="68" id="5kJ-Hm-qdo"/>
                             <constraint firstItem="6ET-8a-rAH" firstAttribute="leading" secondItem="MCa-jX-Ou7" secondAttribute="trailing" constant="83" id="8XG-p9-Wf7"/>
                             <constraint firstItem="MCa-jX-Ou7" firstAttribute="top" secondItem="XFU-bb-y4M" secondAttribute="bottom" constant="190" id="V5c-5K-9a7"/>
-                            <constraint firstItem="RiH-4i-UwQ" firstAttribute="leading" secondItem="xGU-Xv-gXD" secondAttribute="leading" constant="159" id="aVI-Pf-xha"/>
+                            <constraint firstItem="RiH-4i-UwQ" firstAttribute="leading" secondItem="xGU-Xv-gXD" secondAttribute="leading" constant="138" id="aVI-Pf-xha"/>
                             <constraint firstItem="RiH-4i-UwQ" firstAttribute="centerX" secondItem="Lqg-xD-DVB" secondAttribute="centerX" id="bf0-Fm-BCD"/>
                             <constraint firstItem="XFU-bb-y4M" firstAttribute="centerX" secondItem="Lqg-xD-DVB" secondAttribute="centerX" id="d0F-0P-pH5"/>
                             <constraint firstItem="6ET-8a-rAH" firstAttribute="top" secondItem="XFU-bb-y4M" secondAttribute="bottom" constant="190" id="pPf-di-IHD"/>
                             <constraint firstItem="xGU-Xv-gXD" firstAttribute="trailing" secondItem="6ET-8a-rAH" secondAttribute="trailing" constant="71" id="rek-Jj-y5O"/>
                             <constraint firstItem="XFU-bb-y4M" firstAttribute="top" secondItem="xGU-Xv-gXD" secondAttribute="top" constant="127" id="vQ6-Vp-qb9"/>
-                            <constraint firstItem="xGU-Xv-gXD" firstAttribute="bottom" secondItem="RiH-4i-UwQ" secondAttribute="bottom" constant="75" id="yE1-59-0Nd"/>
+                            <constraint firstItem="xGU-Xv-gXD" firstAttribute="bottom" secondItem="RiH-4i-UwQ" secondAttribute="bottom" constant="87" id="yE1-59-0Nd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xGU-Xv-gXD"/>
                     </view>
@@ -421,7 +421,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.27100064212328762" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gxH-pA-dbN" firstAttribute="top" secondItem="Ljr-fP-vNQ" secondAttribute="top" constant="21" id="1sx-09-Ynl"/>
                                     <constraint firstItem="gCa-Bb-7Wo" firstAttribute="top" secondItem="Ljr-fP-vNQ" secondAttribute="top" constant="25" id="5Td-bf-VUd"/>
@@ -480,7 +480,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.27000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="AMN-k2-GMA"/>
                                     <constraint firstItem="sPQ-OT-fSg" firstAttribute="leading" secondItem="DPQ-VO-SzG" secondAttribute="leading" constant="22" id="FJj-rh-HNU"/>
@@ -544,7 +544,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.27000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="MzC-kD-pgE" firstAttribute="leading" secondItem="zdV-9g-QGQ" secondAttribute="trailing" constant="16" id="24D-as-dgP"/>
                                     <constraint firstAttribute="width" constant="375" id="5Ik-kJ-qMD"/>
@@ -1094,7 +1094,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.63990261130136983" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.44" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="3uu-Ub-1eX"/>
                                     <constraint firstItem="Zq9-mV-DJS" firstAttribute="top" secondItem="MgI-QL-Tor" secondAttribute="top" constant="21" id="GGx-LB-dBG"/>
@@ -1173,7 +1173,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.63990261130000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.44" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="0nQ-XB-6hW"/>
                                     <constraint firstItem="3ng-cP-9le" firstAttribute="leading" secondItem="Ih8-c9-Dit" secondAttribute="trailing" constant="28" id="2BD-5p-x7W"/>
@@ -1238,7 +1238,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.63990261130000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.44" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="o4l-QR-9t3" firstAttribute="top" secondItem="Lor-xe-FvV" secondAttribute="top" constant="20" id="EQ8-oJ-AFj"/>
                                     <constraint firstAttribute="bottom" secondItem="RpP-vq-ooo" secondAttribute="bottom" constant="21" id="Pal-0b-UXw"/>
